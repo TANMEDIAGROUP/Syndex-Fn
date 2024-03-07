@@ -28,7 +28,7 @@ function SignUp() {
   const signup = async () => {};
   return (
     <div className="min-h-[80vh] w-full flex flex-col items-center justify-center">
-      <h1 className="text-4xl mb-12">Sign In</h1>
+      <h1 className="text-4xl mb-12">Sign Up</h1>
       <div className="md:w-[70%] min-w-fit max-w-[40em] text-[#292D32] ">
         <div className="grid grid-cols-2">
           <div className="grid mx-2 ">
@@ -125,9 +125,11 @@ function SignUp() {
         </div>
 
         <div className="grid">
+          
+          <a href="/login" className="mt-2 font-bold underline">have an account, Sign In</a>
           <button
             type="submit"
-            className="my-4 font-bold w-full py-4 bg-[#F15253] text-white rounded-xl hover:bg-white hover:text-brandRed border-2 border-brandRed"
+            className="my-2 font-bold w-full py-4 bg-[#F15253] text-white rounded-xl hover:bg-white hover:text-brandRed border-2 border-brandRed"
           >
             Continue
           </button>

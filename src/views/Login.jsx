@@ -4,8 +4,8 @@ import { BsFacebook } from "react-icons/bs";
 import { FaApple } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
-function Login() {
-  const [form, setform] = useState({});
+const Login = () => {
+  // const [form, setform] = useState({});
   const signup = async () => {};
   const password = useRef();
   const styleIcon = "text-4xl";
@@ -62,12 +62,17 @@ function Login() {
             }}
           />
         </div>
-        <a
-          href="/reset/password"
-          className="text-brandRed mt-1 text-right font-bold"
-        >
-          Reset Password
-        </a>
+        <div className="flex justify-between">
+          <a href="/register" className="mt-2 font-bold underline">
+            don't have an account, Sign Up
+          </a>
+          <a
+            href="/reset/password"
+            className="text-brandRed mt-1 text-right font-bold"
+          >
+            Reset Password
+          </a>
+        </div>
         <button
           type="submit"
           className="my-1 font-bold w-full py-4 bg-[#F15253] text-white rounded-xl hover:bg-white hover:text-brandRed border-2 border-brandRed"
@@ -89,6 +94,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

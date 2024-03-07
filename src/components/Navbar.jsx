@@ -4,6 +4,7 @@ import Button from "./Button";
 import { RiMenu3Fill} from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { useState,useEffect } from "react";
+import { FaUserCircle } from "react-icons/fa";
 //will have to fix Nav and Link
 const NavigationLinks = [
   { title: "Home", route: "/" },
@@ -12,7 +13,7 @@ const NavigationLinks = [
   { title: "Blog", route: "/Blog" },
   { title: "News", route: "/News" },
 ];
-function Navbar() {
+function Navbar({user}) {
   const [navStyle, setnavStyle] = useState("100%");
   useEffect(()=>{
     
@@ -36,7 +37,14 @@ function Navbar() {
           })}
         </div>
         <div className=" min-w-max flex items-center ">
-          <Button text={"Register Now"} link='/register' />
+          {user ? (
+            <div>
+              <FaUserCircle className="text-4xl hover:text-brandRed hover:scale-105" />
+            </div>
+          ) : (
+            <Button text={"Register Now"} link="/register" />
+          )}
+
           <button
             onClick={() => {
               if (navStyle == "100%") {
@@ -46,7 +54,7 @@ function Navbar() {
               }
             }}
           >
-            {navStyle =="100%"? (
+            {navStyle == "100%" ? (
               <RiMenu3Fill className="text-4xl grid md:hidden ml-4" />
             ) : (
               <RxCross2 className="text-4xl grid md:hidden ml-4" />

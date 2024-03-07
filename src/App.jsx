@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //pages
-import Landing from "./pages/Landing";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
-import NotFoundPage from "./pages/404page";
+import Landing from "./views/Landing";
+import Login from "./views/Login";
+import SignUp from "./views/SignUp";
+import NotFoundPage from "./views/404page";
 //components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
