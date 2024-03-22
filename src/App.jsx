@@ -7,6 +7,7 @@ import NotFoundPage from "./views/404page";
 //components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SelfReg from "./views/SelfReg";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/self-registration" element={<SelfReg />} />
         </Routes>
       </Router>
       <Footer />
