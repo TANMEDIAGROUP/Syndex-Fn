@@ -20,7 +20,7 @@ function Navbar({user}) {
   },[])
   return (
     <>
-      <nav className="flex justify-between py-4 md:py-2 items-center fixed w-full px-[3vw] z-[300] bg-white shadow-sm">
+      <nav className="flex justify-between pb-4 md:py-2 items-center fixed w-full px-[3vw] z-[300] bg-white shadow-sm top-0">
         <Logo />
         <div className="hidden w-full md:relative  justify-end mr-6 md:flex flex-row">
           {NavigationLinks.map(({ title, route }) => {

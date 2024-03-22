@@ -53,7 +53,7 @@ function SignUp() {
               className="border-[1px] border-gray-400 rounded-lg py-3 px-4"
             />
           </div>
-          <div className="grid mx-2 ">
+          <div className="grid mx-2 mt-4">
             <label htmlFor="email" className="font-bold mb-1 ">
               Other Name
             </label>
@@ -64,7 +64,7 @@ function SignUp() {
               className="border-[1px] border-gray-400 rounded-lg py-3 px-4"
             />
           </div>
-          <div className="grid mx-2 ">
+          <div className="grid mx-2 mt-4">
             <label htmlFor="email" className="font-bold mb-1 ">
               Email
             </label>

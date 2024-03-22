@@ -17,8 +17,9 @@ function Hero() {
           All your favorite news, publications, blogs,magazines, and newspapers
           in a single personalized feed.
         </p>
-        <div className="grid justify-center md:justify-start">
-          <Button text={"Request a demo"} className="" />
+        <div className="grid grid-cols-2 justify-center md:justify-start m-4">
+          <Button text={"Sign-up as User"} className="" link="/self-registration"/>
+          <Button text={"Sign-up for Publishers"} className="/self-registration" />
         </div>
       </div>
       <img
