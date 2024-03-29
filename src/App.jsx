@@ -4,9 +4,12 @@ import Landing from "./views/Landing";
 import Login from "./views/Login";
 import SignUp from "./views/SignUp";
 import NotFoundPage from "./views/404page";
+import Reset from "./views/Reset"
+
 //components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Publisher from "./views/Publisher";
 import SelfReg from "./views/SelfReg";
 
 function App() {
@@ -20,7 +23,9 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/self-registration" element={<SelfReg />} />
+          <Route path="/publish" element={<Publisher />} />
+          <Route path="/reset/password" element={<Reset />}/>
+          <Route path="/self-registration" element={<SelfReg />}/>
         </Routes>
       </Router>
       <Footer />

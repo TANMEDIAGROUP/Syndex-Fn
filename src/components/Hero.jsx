@@ -1,5 +1,5 @@
 import Button from "./Button";
-import idrisHero from "../assets/hero.png";
+import idrisHero from "../assets/idrisHero.png";
 
 function Hero() {
   return (
@@ -18,14 +18,13 @@ function Hero() {
           in a single personalized feed.
         </p>
         <div className="grid grid-cols-2 justify-center md:justify-start m-4">
-          <Button text={"Sign-up as User"} className="" link="/self-registration"/>
-          <Button text={"Sign-up for Publishers"} className="/self-registration" />
+          <Button text={"Join Us"} className="" link="/self-registration"/>
         </div>
       </div>
       <img
         src={idrisHero}
         alt=""
-        className="z-[-4] absolute  right-[-0em] md:fixed md:h-[80vh] bottom-[0em] md:right-[-7em] object-cover"
+        className="z-[-4] absolute  right-[-0em] md:fixed md:h-[90vh] lg:h-[80vh] bottom-[0em] md:right-[-7em] object-cover"
       />
       <div></div>
     </div>

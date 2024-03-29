@@ -126,7 +126,7 @@ function SignUp() {
 
         <div className="grid">
           
-          <a href="/login" className="mt-2 font-bold underline">have an account, Sign In</a>
+          <a href="/login" className="flex mt-2 font-bold underline justify-center">have an account, Sign In</a>
           <button
             type="submit"
             className="my-2 font-bold w-full py-4 bg-[#F15253] text-white rounded-xl hover:bg-white hover:text-brandRed border-2 border-brandRed"

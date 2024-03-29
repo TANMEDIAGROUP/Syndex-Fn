@@ -42,7 +42,10 @@ function Navbar({user}) {
               <FaUserCircle className="text-4xl hover:text-brandRed hover:scale-105" />
             </div>
           ) : (
-            <Button text={"Register Now"} link="/register" />
+            <>
+              <a href="/login" className="hover:bg-brandRed m-4 py-2 md:py-[.75em] px-6 rounded-md text-md md:text-lg hover:text-white hover:scale-105 max-w-fit bg-white text-brandRed border-2 border-brandRed"><button>Login</button></a>
+              <Button text={"Sign up"} link="/register" />
+            </>
           )}
 
           <button
