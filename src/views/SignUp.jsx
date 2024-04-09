@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { FaApple } from "react-icons/fa";
@@ -9,22 +9,54 @@ function SignUp() {
   const password = useRef();
   const passwordConfirm = useRef();
   const styleIcon = "text-4xl";
+
+  function handleCallbackResponse(response) {
+    console.log("Encoded JWT ID token: " + response.credential);
+    // Here, you can process the Google sign-in response, such as extracting the user's information
+  }
+
+
+
   //sign up options
   const signupwith = [
     {
       icon: <BsFacebook className={styleIcon} />,
-      link: "https://safety.google/authentication/",
+      action: () => console.log('Facebook sign-in not implemented'),
     },
-    {
-      icon: <FcGoogle className={styleIcon} />,
-      link: "https://safety.google/authentication/",
-    },
-    ,
+    // {
+    //   icon: <FcGoogle className={styleIcon} onClick={googleSignIn} />,
+    //   action: googleSignIn,
+    //   //action: () => console.log('Facebook sign-in not implemented'),
+
+    // },
     {
       icon: <FaApple className={styleIcon} />,
-      link: "https://safety.google/authentication/",
+      action: () => console.log('Apple sign-in not implemented'),
     },
   ];
+
+  useEffect(() => {
+    // loading Google authitification
+    const script = document.createElement('script');
+    script.src = "https://accounts.google.com/gsi/client";
+    script.onload = () => {
+      // Make sure the google object exists before initializing it
+      window.google.accounts.id.initialize({
+        client_id: '513328992042-a5ps92iu833a3b68pu6k4nq00ebruja7.apps.googleusercontent.com',
+        callback: handleCallbackResponse
+      });
+    };
+    document.body.appendChild(script);
+  }, []);
+
+  // Trigger Google Sign in
+  const triggerGoogleSignIn = () => {
+    window.google.accounts.id.prompt(); // Trigger login prompt when user clicks on icon
+    console.log("Google icon Clicked");
+  };
+
+
+
   const signup = async () => {};
   return (
     <div className="min-h-[80vh] w-full flex flex-col items-center justify-center">
@@ -136,6 +168,7 @@ function SignUp() {
           <h3 className="uppercase font-bold text-center  text-[#818181] mt-2">
             Or register with
           </h3>
+
           <div className="flex justify-center mt-1">
             {signupwith.map(({ icon, link }) => {
               return (
@@ -144,6 +177,14 @@ function SignUp() {
                 </a>
               );
             })}
+            {/* {signupwith.map((item, index) => (
+              <button key={index} className="mx-2" onClick={item.action}>
+                {item.icon}
+              </button>
+            ))} */}
+            <div onClick={triggerGoogleSignIn} style={{ cursor: 'pointer' }}>
+              <FcGoogle size={40} /> {/* You can adjust size here */}
+            </div>
           </div>
         </div>
       </div>
