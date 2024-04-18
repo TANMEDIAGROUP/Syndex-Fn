@@ -26,7 +26,7 @@ const Login = () => {
   ];
   return (
     <div className="min-h-[80vh] w-full flex flex-col items-center justify-center">
-      <h1 className="text-4xl mb-12">Sign In</h1>
+      <h1 className="text-4xl mb-12 mt-20">Sign In</h1>
       <div className="md:w-[70%] min-w-fit max-w-[40em] text-[#292D32] grid">
         <div className="grid">
           <label htmlFor="email" className="font-bold mb-1">
