@@ -18,7 +18,7 @@ function Hero() {
           in a single personalized feed.
         </p>
         <div className="grid justify-center md:justify-start">
-          <Button text={"Request a demo"} className="" />
+          <Button text={"Get Started"} link="/self-registration" />
         </div>
       </div>
       <img

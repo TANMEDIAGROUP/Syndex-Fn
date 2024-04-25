@@ -20,7 +20,7 @@ function Landing() {
       title: "Contributors",
       body: `Grow your audience by reporting on topics important to you and your community. Contribute as an independent voice, sharing local stories that matter.`,
       link: "Become a Contributor",
-      ref: "/contribute",
+      ref: "/publish",
     },
     {
       icon: <RiAdvertisementLine className={iconStyle} />,

@@ -27,7 +27,7 @@ function SignUp() {
   ];
   const signup = async () => {};
   return (
-    <div className="min-h-[80vh] w-full flex flex-col items-center justify-center">
+    <div className="min-h-[80vh] w-full flex flex-col items-center justify-center mt-24">
       <h1 className="text-4xl mb-12">Sign Up</h1>
       <div className="md:w-[70%] min-w-fit max-w-[40em] text-[#292D32] ">
         <div className="grid grid-cols-2">

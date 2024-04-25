@@ -11,6 +11,11 @@ export default {
       fontFamily: {
         logoFont: "Irish Grover",
       },
+      screens: {
+        'ipad': '820px',
+        'asus':{'min': '853px', 'max': '860px'},
+        'surface-pro':{'min': '912px', 'max': '950px'},
+      },
     },
   },
   plugins: [],
