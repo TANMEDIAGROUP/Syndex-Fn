@@ -2,14 +2,13 @@ import stars from '../stories/assets/stars.svg'
 import { FaEye } from "react-icons/fa";
 import { useRef } from 'react';
 
-
 function ResetPassword(){
     const password = useRef();
     const confirmPassword = useRef();
 
     return(
         <div className='grid m-4 justify-center mt-24'>
-            <div className="sm:w-[60vh] md:w-[80vh] my-6">
+            <div className="sm:w-[60vh] md:w-[80vh] my-6 md:px-8">
                 <div className="m-2">
                     <img className="m-auto" src={stars} alt="lock-image"></img>
                 </div>
@@ -21,7 +20,7 @@ function ResetPassword(){
                     </h1>
                 </div>
             </div>
-            <div className="mb-4">
+            <div className="mb-4 md:px-8 ipad:px-16 lg:px-10 asus:px-24 surface-pro:px-36">
                 <div className="grid mt-4 relative">
                     <label htmlFor="password" className="font-bold mb-1">
                         New Password{" "}
@@ -71,7 +70,7 @@ function ResetPassword(){
 
             </div>
 
-            <div className="flex w-full justify-center">
+            <div className="flex w-full justify-center md:px-8 ipad:px-16 lg:px-10 asus:px-24 surface-pro:px-36">
             <a className="w-full" href="/">
                 <button
                         type="continue"

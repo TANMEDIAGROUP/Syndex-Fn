@@ -6,8 +6,7 @@ function Publisher() {
   const passwordConfirm = useRef();
   const styleIcon = "text-4xl";
   //sign up options
-
-
+  
   return (
       <div>
           <div className="sm:w-[80vh] m-auto md:w-[100vh] text-center px-8 shadow-[0_0_20px_#c6c6c6cc] py-[3em] rounded-lg hover:shadow-2xl my-4 relative">

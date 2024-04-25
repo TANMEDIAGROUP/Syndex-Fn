@@ -62,13 +62,13 @@ const Login = () => {
             }}
           />
         </div>
-        <div className="flex justify-between">
-          <a href="/register" className="mt-2 font-bold underline">
+        <div className="flex justify-between align-middle">
+          <a href="/register" className="mt-2 font-bold sm:p-2 underline">
             don't have an account, Sign Up
           </a>
           <a
             href="/reset/password"
-            className="text-brandRed mt-1 text-right font-bold"
+            className="text-brandRed mt-2 text-right sm:p-2 font-bold"
           >
             Reset Password
           </a>
